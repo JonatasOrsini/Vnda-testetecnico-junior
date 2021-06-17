@@ -1,0 +1,2 @@
+html{background:#000;box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}body{line-height:1.3;margin:0;padding:0}@media (max-width:63.9375em){.hide-for-mobile{display:none}}@media (min-width:64em){.hide-for-desktop{display:none}}header{background-image:url(https://picsum.photos/id/1059/1980/1024);display:flex;width:100%}.logo{display:inline-block;width:50%}header>div{flex:1 1 1980px;height:1024px}
+/*# sourceMappingURL=style.css.map */

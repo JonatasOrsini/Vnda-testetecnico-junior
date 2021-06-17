@@ -1,5 +1,53 @@
+/*
+https://mattstauffer.com/blog/organizing-css-oocss-smacss-and-bem/#:~:text=Since%20OOCSS%20is%20an%20abstract,throw%20Sass%20into%20the%20mix.
+*/
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #000;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  background: #666;
+  background-image: url(https://picsum.photos/id/1059/1980/1024);
+}
+
+.logo {
+  display: inline-block;
+  width: 50%;
+}
+
+header > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1980px;
+          flex: 1 1 1980px;
+  height: 1024px;
 }
 /*# sourceMappingURL=style.css.map */
