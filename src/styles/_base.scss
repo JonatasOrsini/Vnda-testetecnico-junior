@@ -2,6 +2,7 @@ html{
     font-size: 100%;
     box-sizing: border-box;
     background: #000;
+    font-family: 'PT Sans', sans-serif;
 }
 
 *, *::before, *::after{
@@ -15,16 +16,15 @@ body{
 }
 
 a{
-
+    text-decoration: none;
+    color: #FFF;
 }
 
-ul{
-
+ul, li{
+    text-decoration: none;
+    list-style: none;
 }
 
-li{
-
-}
 
 // Visibility
 .hide-for-mobile{

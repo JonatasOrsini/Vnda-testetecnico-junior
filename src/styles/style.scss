@@ -1,13 +1,8 @@
-// File structure follows SMACSS.
-// expand the next line and follow the link for context.
-/*
-https://mattstauffer.com/blog/organizing-css-oocss-smacss-and-bem/#:~:text=Since%20OOCSS%20is%20an%20abstract,throw%20Sass%20into%20the%20mix.
-*/
-
 @import "variables";
 @import "mixins";
 
 @import "base";
+@import "navigation";
 @import "layouts";
 @import "modules";
 
@@ -19,11 +14,6 @@ header{
     display: flex;
     width: 100%;
     background-image: url(https://picsum.photos/id/1059/1980/1024);
-}
-
-.logo{
-    display: inline-block;
-    width: 50%;
 }
 
 header > div {

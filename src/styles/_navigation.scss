@@ -1,0 +1,68 @@
+nav {
+  position: fixed;
+  display: flex;
+
+  width: 100%;
+  border: 1px solid green;
+}
+
+nav > * {
+  width: 100%;
+}
+
+.nav {
+  &-flexcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: $container-margin;
+  }
+
+  &-flexcontainer > * {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &-logocontainer {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem;
+    border: 1px solid blue;
+  }
+
+  &-logoflex {
+    display: flex;
+    justify-self: flex-start;
+    border: 1px solid #000;
+  }
+
+  &-logoflex > img {
+    border: 1px solid magenta;
+  }
+
+  &-menucontainer {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    border: 1px solid yellow;
+  }
+
+  &-menu {
+    display: flex;
+    justify-content: center;
+
+    & > .-item {
+      margin: 0.25rem;
+      border: 1px solid #000;
+    }
+
+    border: 1px solid rgb(88, 88, 29);
+  }
+
+  &-iconcontainer{
+
+        
+      border: 1px solid white;
+  }
+}

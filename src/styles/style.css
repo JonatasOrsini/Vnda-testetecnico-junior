@@ -1,11 +1,9 @@
-/*
-https://mattstauffer.com/blog/organizing-css-oocss-smacss-and-bem/#:~:text=Since%20OOCSS%20is%20an%20abstract,throw%20Sass%20into%20the%20mix.
-*/
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #000;
+  font-family: 'PT Sans', sans-serif;
 }
 
 *, *::before, *::after {
@@ -17,6 +15,16 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+ul, li {
+  text-decoration: none;
+  list-style: none;
 }
 
 @media (max-width: 63.9375em) {
@@ -31,17 +39,98 @@ body {
   }
 }
 
+nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border: 1px solid green;
+}
+
+nav > * {
+  width: 100%;
+}
+
+.nav-flexcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 2.5vw;
+}
+
+.nav-flexcontainer > * {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.nav-logocontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1rem;
+  border: 1px solid blue;
+}
+
+.nav-logoflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-start;
+  border: 1px solid #000;
+}
+
+.nav-logoflex > img {
+  border: 1px solid magenta;
+}
+
+.nav-menucontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem;
+  border: 1px solid yellow;
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #58581d;
+}
+
+.nav-menu > .-item {
+  margin: 0.25rem;
+  border: 1px solid #000;
+}
+
+.nav-iconcontainer {
+  border: 1px solid white;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   background-image: url(https://picsum.photos/id/1059/1980/1024);
-}
-
-.logo {
-  display: inline-block;
-  width: 50%;
 }
 
 header > div {
