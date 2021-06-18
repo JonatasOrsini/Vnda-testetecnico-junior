@@ -1,0 +1,68 @@
+.section-company-history {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: $--base-color;
+
+  & > * {
+    width: 100%;
+  }
+}
+
+.swipersection-container {
+  height: 100vh;
+  border: 1px solid #000;
+}
+
+.swipersection-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.-article1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  background: rgb(160, 194, 166);
+
+  border: 1px solid red;
+  & > * {
+    width: 100%;
+  }
+}
+
+.-article2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  background: rgb(115, 163, 124);
+
+  border: 1px solid rgb(41, 22, 204);
+  & > * {
+    width: 100%;
+  }
+}
+
+.-article1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  background: rgb(66, 104, 73);
+
+  border: 1px solid rgb(255, 0, 170);
+  & > * {
+    width: 100%;
+  }
+}

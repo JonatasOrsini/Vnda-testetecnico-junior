@@ -5,7 +5,7 @@
     height: 100vh;
   }
 
-  &-wraper {
+  &-wrapper {
     background-color: #666;
   }
 
@@ -13,35 +13,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-size: cover;
-    background-position: center;
+    flex-direction: column;
   }
 
   &-button-prev {
-    color: #666 !important;
-    opacity: 0.5;
+    color: $--logo-color !important;
+    opacity: 0.7;
     margin: 0 1vw;
   }
 
   &-button-next {
-    color: #666 !important;
-    opacity: 0.5;
+    color: $--logo-color !important;
+    opacity: 0.7;
     margin: 0 1vw;
   }
 
   &-pagination-bullet-active {
-    background: #666 !important;
+    background: $--logo-color !important;
   }
 }
 
 .-slide1 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-
-  background: linear-gradient(0.25turn, #ffffffb2, #ffffffb2, #fafafa00, #fafafa00),
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(
+      0.25turn,
+      #ffffffb2,
+      #ffffffb2,
+      #fafafa00,
+      #fafafa00
+    ),
     url(../images/slide-1.jpg);
 
   & > * {
@@ -51,24 +52,77 @@
   &-title {
     font-size: 12rem;
   }
+
   &-subtitle {
-    font-size: 7rem;
+    font-size: 2.5rem;
   }
 }
 
 .-slide2 {
-  color: #666;
-  background-size: center;
+  background-size: cover;
   background-position: center;
 
-  background-image: url(../images/slide-2.jpg);
+  background: linear-gradient(
+      0.75turn,
+      #ffffffb2,
+      #ffffffb2,
+      #fafafa00,
+      #fafafa00
+    ),
+    url(../images/slide-2.jpg);
+
+  & > * {
+    width: 100%;
+  }
+
+  &-title {
+    font-size: 12rem;
+  }
+
+  &-subtitle {
+    font-size: 2.5rem;
+  }
 }
 
 .-slide3 {
-  background-image: url(../images/slide-3.jpg);
+  background-size: cover;
+  background-position: center;
+
+  background: linear-gradient(
+      0.5turn,
+      #ffffffb2,
+      #ffffffb2,
+      #ffffffb2,
+      #fafafa00
+    ),
+    url(../images/slide-3.jpg);
+
+  & > * {
+    width: 100%;
+  }
+
+  &-title {
+    font-size: 12rem;
+    margin-bottom: 0 !important;
+  }
+  &-subtitle {
+    font-size: 2.5rem;
+  }
 }
 
 .heading-slide1 {
-  margin: 0 0 0 10vw;
-  right: auto;
+  text-align: start;
+  // margin is supposed to be 10vw, swiper is trying to be funny, come back later*
+  margin: 0 0 0 20vw;
+}
+
+.heading-slide2 {
+  text-align: end;
+  // margin is supposed to be 10vw, swiper is trying to be funny, come back later*
+  margin: 0 20vw 0 0;
+}
+
+.heading-slide3 {
+  text-align: center;
+  // margin is supposed to be 10vw, swiper is trying to be funny, come back later*
 }

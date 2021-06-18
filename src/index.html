@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Color palette -->
+    <!-- #F23355 pink -->
+    <!-- #A6021F darkpink -->
+    <!-- #33F256 brightgreen -->
+    <!-- #2FA143 green -->
+    <!-- #26592F darkgreen -->
+    <!-- #FFFFFF white -->
+    <!-- #666666 coolblack -->
+    <!-- #DDDDDD brightgrey -->
     <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css" />
     <!-- Fonts -->
@@ -23,16 +32,21 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <title>Men's Vintage Shoes | Shoo</title>
+    <title>Velas perfumadas | Shoo</title>
   </head>
   <body>
     <div class="tirateima"></div>
     <div class="anim-trigger"></div>
     <nav>
-      <div class="nav-flexcontainer">
+      <div class="nav-wrapper">
         <div class="nav-logocontainer">
           <a class="nav-logo" href="#">
-            <img class= "nav-logo-svg" src="./images/logo.png" alt="Logo SVG" draggable="false" />
+            <img
+              class="nav-logo-svg"
+              src="./images/logo.png"
+              alt="Logo SVG"
+              draggable="false"
+            />
           </a>
         </div>
         <div class="nav-menucontainer">
@@ -45,31 +59,138 @@
           </li>
         </div>
         <div class="nav-iconcontainer">
-          <a class="-icon" href="#"><i class="fas fa-search"></i></a>
-          <a class="-icon" href="#"><i class="fas fa-user"></i></a>
-          <a class="-icon" href="#"><i class="fas fa-shopping-cart"></i></a>
+          <input class="-inputbar -inputbar-hidden" type="text" name="pesquisa" placeholder="Pesquisar" maxlength="40">
+          <a class="-icon -search-link" href="#" onclick="return false;"><i class="fas fa-search"></i></a>
+          <a class="-icon -user-link" href="#" onclick="return false;"><i class="fas fa-user"></i></a>
+          <a class="-icon -shop-link" href="#" onclick="return false;"><i class="fas fa-shopping-cart"></i></a>
         </div>
       </div>
     </nav>
     <header>
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide -slide1"><h1 class="heading-slide1 -slide1-title">Impactful</h1><h1 class="heading-slide1 -slide1-subtitle">wording</h1> </div>
-          <div class="swiper-slide -slide2"><h1>Compre online</h1></div>
-          <div class="swiper-slide -slide3"><h1>Imaginative heading</h1></div>
+          <div class="swiper-slide -slide1">
+            <h1 class="heading-slide1 -slide1-title">Cara nova</h1>
+            <h1 class="heading-slide1 -slide1-subtitle">
+              A Shoo se adaptou e está cheia de novidades para você
+            </h1>
+          </div>
+          <div class="swiper-slide -slide2">
+            <h1 class="heading-slide2 -slide2-title">Loja online</h1>
+            <h1 class="heading-slide2 -slide2-subtitle">
+              compre do conforto da sua casa
+            </h1>
+          </div>
+          <div class="swiper-slide -slide3">
+            <h1 class="heading-slide3 -slide3-title">Shoo next</h1>
+            <h1 class="heading-slide3 -slide3-subtitle">
+              Nossa nova linha de velas é aquilo você estava procurando
+            </h1>
+          </div>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
     </header>
-    <footer>
-      <a href="#">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="#">
-        <i class="fab fa-facebook"></i>
-      </a>
+    <section class="section-gallery-circles">
+      <img
+        class="-gallery-img"
+        src="./images/gallery1.jpg"
+        alt="circles-img1"
+        draggable="false"
+      />
+      <img
+        class="-gallery-img"
+        src="./images/gallery2.jpg"
+        alt="circles-img2"
+        draggable="false"
+      />
+      <img
+        class="-gallery-img"
+        src="./images/gallery3.jpg"
+        alt="circles-img3"
+        draggable="false"
+      />
+      <img
+        class="-gallery-img"
+        src="./images/gallery4.jpg"
+        alt="circles-img4"
+        draggable="false"
+      />
+      <img
+        class="-gallery-img"
+        src="./images/gallery5.jpg"
+        alt="circles-img5"
+        draggable="false"
+      />
+      <img
+        class="-gallery-img"
+        src="./images/gallery6.jpg"
+        alt="circles-img6"
+        draggable="false"
+      />
+    </section>
+    <section class="section-company-history">
+      <div class="swipersection-container">
+        <div class="swiper-wrapper">
+          <div class="swipersection-slide -article1">
+            <h1 class="">Impactful</h1>
+            <h1 class="">wording</h1>
+          </div>
+          <div class="swipersection-slide -article2">
+            <h1>Compre online</h1>
+          </div>
+          <div class="swipersection-slide -article3">
+            <h1>Imaginative heading</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-wrapper">
+      <section class="footer-container-left">
+        <ul>
+          MENU
+        </ul>
+        <ul class="footer-menu">
+          <li class="footer-menu-submenu"><a href="#">Novidades</a></li>
+          <li class="footer-menu-submenu"><a href="#">Produtos</a></li>
+          <li class="footer-menu-submenu"><a href="#">Blog</a></li>
+          <li class="footer-menu-submenu"><a href="#">Portal</a></li>
+        </ul>
+      </section>
+      <section class="footer-container-middle">
+        <ul>
+          MENU
+        </ul>
+        <ul class="footer-contato">
+          <li class="footer-contato-submenu">Email</li>
+        </ul>
+      </section>
+      <section class="footer-container-right">
+        <ul>
+          MENU
+        </ul>
+        <ul class="footer-socials">
+          <li class="footer-socials-submenu">
+            <a href="#"
+              ><i class="fab fa-instagram -icon-darkmode"></i>instagram</a
+            >
+          </li>
+          <li class="footer-socials-submenu">
+            <a href="#">
+              <i class="fab fa-facebook -icon-darkmode"></i>facebook</a
+            >
+          </li>
+        </ul>
+      </section>
+      </div>
+      <div class="footer-wrapper-vnda">
+        <li>
+          <a>@Vnda - Tecnologia para ecommerce – CNPJ 12.3456.789/1011-12</a>
+        </li>
+      </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

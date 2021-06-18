@@ -15,16 +15,18 @@ nav > * {
 }
 
 .nav {
-  &-flexcontainer {
-      position: relative;
+  &-wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     margin: $--container-margin;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
-  &-flexcontainer > * {
+  &-wrapper > * {
     justify-content: space-between;
     width: 100%;
   }
@@ -32,7 +34,6 @@ nav > * {
   &-logocontainer {
     display: flex;
     justify-content: flex-start;
-    margin: 1rem;
   }
 
   &-logo {
@@ -48,7 +49,6 @@ nav > * {
   &-menucontainer {
     display: flex;
     justify-content: center;
-    margin: 1rem;
   }
 
   &-menu {
@@ -62,14 +62,14 @@ nav > * {
       letter-spacing: 1px;
       margin: 1.25rem;
 
-      &::after{
-          content:"";
-          position: relative;
-          bottom: 0;
-          display: flex;
-          width: inherit;
-          height: 2px;
-          background: transparent;
+      &::after {
+        content: "";
+        position: relative;
+        bottom: 0;
+        display: flex;
+        width: inherit;
+        height: 2px;
+        background: transparent;
       }
     }
   }
@@ -77,9 +77,34 @@ nav > * {
   &-iconcontainer {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+
+    & > .-inputbar {
+      outline: transparent;
+      border: none;
+      color: #666;
+      font-style: italic;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 3px solid #26592f;
+      transition: all 300ms ease-in-out;
+
+
+      &:focus {
+        border: 3px solid #2fa144;
+      }
+    }
+
+    & > .-inputbar-hidden {
+      animation: inputbar-hidden 300ms ease-in-out forwards;
+    }
+
+    & > .-inputbar-expand {
+      animation: inputbar-expand 300ms ease-in-out forwards;
+    }
 
     & > .-icon {
-      margin: 0 0 0 16px;
+      margin: 0 0 0 1em;
     }
   }
 }

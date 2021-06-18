@@ -1,4 +1,7 @@
-// This class is used in the Javascript index.js to shrink the navigation bar
+// Os styles a seguir são utilizados em  animations.js para:
+// Encolher a barra de navegação, trocar os elementos e core de fundo assim como mudar os tamanhos dos elementos
+// Maires comentários podem ser encontrados em animations.js
+
 .anim-trigger {
   position: absolute;
   top: 0;
@@ -88,10 +91,72 @@
   animation: revertlogo-svgcolor 300ms ease forwards;
 }
 
-#icon-darkmode{
-    color: #fff;
+#icon-darkmode {
+  color: #fff;
 }
 
-#menu-darkmode{
-    color: #fff;
+#menu-darkmode {
+  color: #fff;
+}
+
+// Os styles a seguir são utilizados em  _section-gallery-circles.scss para:
+// Acrescenta active-state e eye-candy para o visitante enquanto o cursor passa pelas imagens da sessão
+
+@keyframes img-hover-anim {
+  0% {
+    transform: scale(100%);
+  }
+  15% {
+    transform: scale(90%);
+  }
+  30% {
+    transform: scale(100%);
+  }
+  90% {
+    transform: scale(115%);
+  }
+  100% {
+    transform: scale(110%);
+  }
+}
+
+// Os styles a seguir são utilizados em  _navigation.scss para:
+// Acrescenta active-state e eye-candy para o visitante enquanto o cursor passa pelas imagens da sessão
+
+@keyframes inputbar-expand {
+  0% {
+    display: none;
+    visibility: hidden;
+    max-width: 0px;
+    opacity: 0;
+  }
+  1% {
+    display: inline-block;
+    visibility: visible;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    display: inline-block;
+    max-width: 170px;
+  }
+}
+
+@keyframes inputbar-hidden {
+  0% {
+    display: inline-block;
+    max-width: 170px;
+    opacity: 1;
+  }
+  99% {
+    display: inline-block;
+    visibility: visible;
+    max-width: 0px;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    visibility: hidden;
+  }
 }
