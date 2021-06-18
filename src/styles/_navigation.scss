@@ -1,9 +1,13 @@
 nav {
+  z-index: 3;
   position: fixed;
   display: flex;
 
+  top: 0;
   width: 100%;
-  border: 1px solid green;
+  background: linear-gradient(135deg, #ffffff00, #c4ffe620, #26592f, #142714);
+  background-size: 300% 300%;
+  box-shadow: 5px 5px 50px 50px rgba(0, 0, 0, 0.04);
 }
 
 nav > * {
@@ -12,11 +16,12 @@ nav > * {
 
 .nav {
   &-flexcontainer {
+      position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin: $container-margin;
+    margin: $--container-margin;
   }
 
   &-flexcontainer > * {
@@ -28,24 +33,22 @@ nav > * {
     display: flex;
     justify-content: flex-start;
     margin: 1rem;
-    border: 1px solid blue;
   }
 
-  &-logoflex {
+  &-logo {
     display: flex;
     justify-self: flex-start;
-    border: 1px solid #000;
-  }
 
-  &-logoflex > img {
-    border: 1px solid magenta;
+    &-svg {
+      filter: invert(28%) sepia(20%) saturate(1149%) hue-rotate(79deg)
+        brightness(50%) contrast(95%);
+    }
   }
 
   &-menucontainer {
     display: flex;
     justify-content: center;
     margin: 1rem;
-    border: 1px solid yellow;
   }
 
   &-menu {
@@ -53,16 +56,30 @@ nav > * {
     justify-content: center;
 
     & > .-item {
-      margin: 0.25rem;
-      border: 1px solid #000;
-    }
+      color: $--menu-color;
+      font-size: $--fs-medium;
+      font-weight: $--menu-weight;
+      letter-spacing: 1px;
+      margin: 1.25rem;
 
-    border: 1px solid rgb(88, 88, 29);
+      &::after{
+          content:"";
+          position: relative;
+          bottom: 0;
+          display: flex;
+          width: inherit;
+          height: 2px;
+          background: transparent;
+      }
+    }
   }
 
-  &-iconcontainer{
+  &-iconcontainer {
+    display: flex;
+    justify-content: flex-end;
 
-        
-      border: 1px solid white;
+    & > .-icon {
+      margin: 0 0 0 16px;
+    }
   }
 }

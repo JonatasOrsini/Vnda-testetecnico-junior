@@ -1,22 +1,14 @@
 @import "variables";
 @import "mixins";
+@import "animations";
 
 @import "base";
 @import "navigation";
+@import "header";
+@import "footer";
+
 @import "layouts";
 @import "modules";
 
 @import "other";
 @import "shame";
-
-
-header{
-    display: flex;
-    width: 100%;
-    background-image: url(https://picsum.photos/id/1059/1980/1024);
-}
-
-header > div {
-    flex: 1 1 1980px;
-    height: 1024px;
-}
