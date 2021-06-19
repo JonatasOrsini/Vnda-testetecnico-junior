@@ -158,11 +158,27 @@
 }
 
 #icon-darkmode {
-  color: #fff;
+  color: #FFFFFF;
+}
+
+#icon-darkmode:hover, #icon-darkmode:focus {
+  color: #2FA143;
+}
+
+#inputbar-darkmode {
+  border: 3px solid #2FA143;
+}
+
+#inputbar-darkmode:hover, #inputbar-darkmode:focus {
+  border: 3px solid #F23355;
 }
 
 #menu-darkmode {
-  color: #fff;
+  color: #FFFFFF;
+}
+
+#menu-darkmode:hover, #menu-darkmode:focus {
+  color: #2FA143;
 }
 
 @-webkit-keyframes img-hover-anim {
@@ -287,6 +303,10 @@
   }
 }
 
+.active-icon {
+  color: #2FA143;
+}
+
 html {
   overflow-x: hidden;
   font-size: 100%;
@@ -304,6 +324,14 @@ html {
           box-sizing: inherit;
 }
 
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 4px dotted #A6021F;
+}
+
 body,
 ul,
 li,
@@ -313,22 +341,21 @@ h5,
 h1 {
   margin: 0;
   padding: 0;
-  line-height: 1.3;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #FFFFFF;
 }
 
-ul {
-  color: #fff;
+ul, li {
+  color: #FFFFFF;
   text-decoration: none;
   list-style: none;
 }
 
 h1 {
-  color: #26592f;
+  color: #26592F;
 }
 
 @media (max-width: 63.9375em) {
@@ -347,11 +374,11 @@ h1 {
 .far,
 .fab {
   font-size: 20px;
-  color: #26592f;
+  color: #26592F;
 }
 
 .-icon-darkmode {
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .tirateima {
@@ -368,10 +395,10 @@ nav {
   display: flex;
   top: 0;
   width: 100%;
-  background: linear-gradient(135deg, #ffffff00, #c4ffe620, #26592f, #142714);
+  background: linear-gradient(135deg, #00000000, #00000000, #26592F, #142714);
   background-size: 300% 300%;
-  -webkit-box-shadow: 5px 5px 50px 50px rgba(0, 0, 0, 0.04);
-          box-shadow: 5px 5px 50px 50px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0px 0px 7px 7px #00000020;
+          box-shadow: 0px 0px 7px 7px #00000020;
 }
 
 nav > * {
@@ -390,8 +417,6 @@ nav > * {
       -ms-flex-align: center;
           align-items: center;
   margin: 0rem 10vw;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .nav-wrapper > * {
@@ -399,15 +424,6 @@ nav > * {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-}
-
-.nav-logocontainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .nav-logo {
@@ -422,13 +438,14 @@ nav > * {
           filter: invert(28%) sepia(20%) saturate(1149%) hue-rotate(79deg) brightness(50%) contrast(95%);
 }
 
-.nav-menucontainer {
+.nav-logocontainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 2rem 0;
 }
 
 .nav-menu {
@@ -438,29 +455,60 @@ nav > * {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 .nav-menu > .-item {
-  color: #26592f;
+  color: #26592F;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 1px;
-  margin: 1.25rem;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-menu > .-item:not(:last-child) {
+  margin-right: 1.25rem;
 }
 
 .nav-menu > .-item::after {
   content: "";
-  position: relative;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: inherit;
-  height: 2px;
+  height: 4px;
   background: transparent;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
-.nav-iconcontainer {
+.nav-menu > .-item:hover, .nav-menu > .-item:focus-visible {
+  color: #2FA143;
+}
+
+.nav-menu > .-item:hover::after {
+  height: 4px;
+  background: #2FA143;
+}
+
+.nav-menucontainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  margin: 2rem 0;
+}
+
+.nav-icon-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -470,36 +518,61 @@ nav > * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 2rem 0;
 }
 
-.nav-iconcontainer > .-inputbar {
+.nav-icon-wrapper > * {
+  margin-left: 0.5rem;
+}
+
+.nav-icon-wrapper > .icon-container > .-icon > i:hover {
+  color: #2FA143;
+}
+
+.nav-icon-wrapper > .-inputbar {
   outline: transparent;
   border: none;
-  color: #666;
+  color: #666666;
   font-style: italic;
-  background-color: #fff;
+  background-color: #FFFFFF;
   border-radius: 5px;
-  border: 3px solid #26592f;
+  border: 3px solid #26592F;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
-.nav-iconcontainer > .-inputbar:focus {
-  border: 3px solid #2fa144;
+.nav-icon-wrapper > .-inputbar:focus {
+  border: 3px solid #2FA143;
 }
 
-.nav-iconcontainer > .-inputbar-hidden {
+.nav-icon-wrapper > .-inputbar-hidden {
   -webkit-animation: inputbar-hidden 300ms ease-in-out forwards;
           animation: inputbar-hidden 300ms ease-in-out forwards;
 }
 
-.nav-iconcontainer > .-inputbar-expand {
+.nav-icon-wrapper > .-inputbar-expand {
   -webkit-animation: inputbar-expand 300ms ease-in-out forwards;
           animation: inputbar-expand 300ms ease-in-out forwards;
 }
 
-.nav-iconcontainer > .-icon {
-  margin: 0 0 0 1em;
+.shop-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop-submenu {
+  position: absolute;
 }
 
 .swiper {
@@ -531,19 +604,19 @@ nav > * {
 }
 
 .swiper-button-prev {
-  color: #26592f !important;
+  color: #26592F !important;
   opacity: 0.7;
   margin: 0 1vw;
 }
 
 .swiper-button-next {
-  color: #26592f !important;
+  color: #26592F !important;
   opacity: 0.7;
   margin: 0 1vw;
 }
 
 .swiper-pagination-bullet-active {
-  background: #26592f !important;
+  background: #26592F !important;
 }
 
 .-slide1 {
@@ -674,7 +747,7 @@ nav > * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
+  background: #FFFFFF;
 }
 
 .section-company-history > * {
@@ -780,7 +853,7 @@ nav > * {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background: #26592f;
+  background: #26592F;
   height: 300px;
 }
 
@@ -797,7 +870,7 @@ nav > * {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background: #26592f;
+  background: #26592F;
   height: 300px;
 }
 

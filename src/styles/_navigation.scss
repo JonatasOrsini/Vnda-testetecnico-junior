@@ -5,9 +5,15 @@ nav {
 
   top: 0;
   width: 100%;
-  background: linear-gradient(135deg, #ffffff00, #c4ffe620, #26592f, #142714);
+  background: linear-gradient(
+    135deg,
+    $--bg-linear-gradient1,
+    $--bg-linear-gradient2,
+    $--bg-linear-gradient3,
+    $--bg-linear-gradient4
+  );
   background-size: 300% 300%;
-  box-shadow: 5px 5px 50px 50px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 0px 7px 7px $--col-transparent20;
 }
 
 nav > * {
@@ -17,23 +23,17 @@ nav > * {
 .nav {
   &-wrapper {
     position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     margin: $--container-margin;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
   }
 
   &-wrapper > * {
     justify-content: space-between;
     width: 100%;
-  }
-
-  &-logocontainer {
-    display: flex;
-    justify-content: flex-start;
   }
 
   &-logo {
@@ -44,67 +44,120 @@ nav > * {
       filter: invert(28%) sepia(20%) saturate(1149%) hue-rotate(79deg)
         brightness(50%) contrast(95%);
     }
-  }
 
-  &-menucontainer {
-    display: flex;
-    justify-content: center;
+    &container {
+      display: flex;
+      justify-content: flex-start;
+
+      margin: 2rem 0;
+    }
   }
 
   &-menu {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
 
     & > .-item {
       color: $--menu-color;
       font-size: $--fs-medium;
       font-weight: $--menu-weight;
       letter-spacing: 1px;
-      margin: 1.25rem;
+
+      transition: all 300ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 1.25rem;
+      }
 
       &::after {
         content: "";
-        position: relative;
         bottom: 0;
         display: flex;
         width: inherit;
-        height: 2px;
+        height: 4px;
         background: transparent;
+
+        transition: all 300ms ease-in-out;
       }
+
+      &:hover,
+      &:focus-visible {
+        color: $--active-color;
+      }
+
+      &:hover::after {
+        height: 4px;
+        background: $--active-color;
+      }
+    }
+
+    &container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      height: 100%;
+      margin: 2rem 0;
     }
   }
 
-  &-iconcontainer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  &-icon {
+    &-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
 
-    & > .-inputbar {
-      outline: transparent;
-      border: none;
-      color: #666;
-      font-style: italic;
-      background-color: #fff;
-      border-radius: 5px;
-      border: 3px solid #26592f;
-      transition: all 300ms ease-in-out;
+      margin: 2rem 0;
 
+      & > * {
+        margin-left: 0.5rem;
+      }
 
-      &:focus {
-        border: 3px solid #2fa144;
+      &> .icon-container {
+        & > .-icon {
+          & > i:hover{
+            color: $--active-color;
+          }
+        }
+      }
+
+      & > .-inputbar {
+        outline: transparent;
+        border: none;
+        color: $--col-midgray;
+        font-style: italic;
+        background-color: $--base-color;
+        border-radius: 5px;
+        border: 3px solid $--menu-color;
+        transition: all 300ms ease-in-out;
+
+        &:focus {
+          border: 3px solid $--active-color;
+        }
+
+        &-hidden {
+          animation: inputbar-hidden 300ms ease-in-out forwards;
+        }
+
+        &-expand {
+          animation: inputbar-expand 300ms ease-in-out forwards;
+        }
       }
     }
+  }
+}
 
-    & > .-inputbar-hidden {
-      animation: inputbar-hidden 300ms ease-in-out forwards;
-    }
+.shop {
+  &-container {
+    display: flex;
+    flex-direction: column;
 
-    & > .-inputbar-expand {
-      animation: inputbar-expand 300ms ease-in-out forwards;
-    }
-
-    & > .-icon {
-      margin: 0 0 0 1em;
-    }
+    justify-content: center;
+    align-items: center;
+  }
+  &-submenu {
+    position: absolute;
   }
 }

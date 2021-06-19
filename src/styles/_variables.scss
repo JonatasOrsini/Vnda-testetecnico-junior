@@ -1,12 +1,41 @@
+
+// Margins
 $--container-margin: 0rem 10vw;
 
+// Font-sized
 $--fs-medium: 1.25rem;
 
-$--base-color: #fff;
-$--menu-color: #26592f;
+// Collor Palette
+$--col-pink: #F23355;
+$--col-darkpink: #A6021F;
+$--col-brightgreen: #33F256;
+$--col-green: #2FA143;
+$--col-darkgreen: #26592F;
+$--col-blackgreen: #142714;
+$--col-white: #FFFFFF;
+$--col-brightgray: #DDDDDD;
+$--col-midgray: #666666;
+$--col-coolblack: #333333;
+$--col-transparent: #00000000;
+$--col-transparent20: #00000020;
+
+// Switch colors here to customize the whole site
+$--base-color: $--col-white;
+$--menu-color: $--col-darkgreen;
+$--active-color: $--col-green;
+$--contrast-color: $--col-darkpink;
+$--contrast-active-color: $--col-pink;
+
+$--h1s-color: $--col-darkgreen;
+$--p-color: $--col-darkgreen;
+$--logo-color: $--col-darkgreen;
+
+// Navigation bar background linear gradient colors
+$--bg-linear-gradient1: $--col-transparent;
+$--bg-linear-gradient2: $--col-transparent;
+$--bg-linear-gradient3: $--col-darkgreen;
+$--bg-linear-gradient4: $--col-blackgreen;
+
 $--menu-weight: 700;
 $--font-weight400: 400;
 $--font-weight700: 700;
-
-$--h1s-color: #26592f;
-$--logo-color: #26592f;

@@ -92,11 +92,30 @@
 }
 
 #icon-darkmode {
-  color: #fff;
+  color: $--base-color;
+
+  &:hover,
+  &:focus {
+    color: $--active-color;
+  }
+}
+
+#inputbar-darkmode {
+  border: 3px solid $--active-color;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $--contrast-active-color;
+  }
 }
 
 #menu-darkmode {
-  color: #fff;
+  color: $--base-color;
+
+  &:hover,
+  &:focus {
+    color: $--active-color;
+  }
 }
 
 // Os styles a seguir são utilizados em  _section-gallery-circles.scss para:
@@ -159,4 +178,8 @@
     display: none;
     visibility: hidden;
   }
+}
+
+.active-icon{
+  color: $--active-color;
 }

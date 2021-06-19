@@ -13,6 +13,14 @@ html {
   box-sizing: inherit;
 }
 
+:focus{
+  outline: none;
+}
+
+:focus-visible{
+  outline: 4px dotted $--contrast-color;
+}
+
 body,
 ul,
 li,
@@ -22,16 +30,15 @@ h5,
 h1 {
   margin: 0;
   padding: 0;
-  line-height: 1.3;
 }
 
 a {
   text-decoration: none;
-  color: $--base-color;
+  color: $--col-white;
 }
 
-ul {
-  color: $--base-color;
+ul, li {
+  color: $--col-white;
   text-decoration: none;
   list-style: none;
 }
@@ -53,7 +60,7 @@ h1 {
   }
 }
 
-// Default Icon size
+// Default Icon style
 .fas,
 .far,
 .fab {
@@ -62,10 +69,10 @@ h1 {
 }
 
 .-icon-darkmode {
-  color: #fff;
+  color: $--col-white;
 }
 
-// wall
+// wall REMOVE LATTER
 .tirateima {
   display: none;
   height: 122px;

@@ -5,7 +5,8 @@ const trigger = document.querySelector(".anim-trigger");
 const nav = document.querySelector("nav");
 const logo = document.querySelector(".nav-logo");
 const logosvg = document.querySelector(".nav-logo-svg");
-const navicons = document.querySelectorAll(".nav-iconcontainer .-icon i");
+const inputbarcolor = document.querySelector(".-inputbar");
+const navicons = document.querySelectorAll(".-icon i");
 const menu = document.querySelectorAll(".nav-menu .-item");
 
 // navOptions é um offset em pixels
@@ -27,6 +28,8 @@ const navObserver = new IntersectionObserver(function (entries, navObserver) {
       logo.classList.add("shrink-logo");
       // Troca a cor do logo para modo escuro
       logosvg.classList.add("changelogo-svgcolor");
+      // Troca a cor do outline da barra de pesquisa para modo escuro
+      inputbarcolor.setAttribute("id", "inputbar-darkmode");
 
       // Troca a cor do menu para modo escuro
       for (let i = 0; i < menu.length; i++) {
@@ -53,6 +56,8 @@ const navObserver = new IntersectionObserver(function (entries, navObserver) {
       logo.classList.add("grow-logo");
       // Reverte a cor do logo
       logosvg.classList.add("revertlogo-svgcolor");
+      // Reverte a cor do outline da barra de pesquisa
+      inputbarcolor.removeAttribute("id", "inputbar-darkmode");
 
       // Reverte a cor do menu
       for (let i = 0; i < menu.length; i++) {
@@ -100,6 +105,8 @@ searchiconlink.addEventListener("click", function () {
     inputbar.classList.remove("-inputbar-expand");
   }
 });
+
+// 
 
 const usericonlink = document.querySelector(".-user-link");
 const shopiconlink = document.querySelector(".-shop-link");
