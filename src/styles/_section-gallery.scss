@@ -1,0 +1,70 @@
+// Todos styles contidos na sessão gallery são encontrados aqui
+// animações podem ser encontradas em _animations.scss
+
+// Wrapper da sessão. para telas grandes
+.section-gallery-circles {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  // Respiro entre as imagens
+  column-gap: 2.5rem;
+
+  // Respiro das laterais da sessão. para telas grandes
+  margin: $--mg-gallery-height $--mg-gallery-sides;
+
+  & > * {
+    width: 100%;
+  }
+
+  // Links das imagens da galeria. para telas grandes
+  & > .-gallery-img {
+    border-radius: 50%;
+    background: #d3d3d300;
+    outline: 1px solid #c5c5c500;
+    outline-offset: 18px;
+
+    & > * {
+      width: 100%;
+    }
+
+    & > img {
+      border-radius: 50%;
+
+      outline: 1px solid #c5c5c500;
+      outline-offset: 18px;
+    }
+  }
+}
+
+@include breakpoint-down(large) {
+  // Troca o layout de 1 coluna para 2. para telas média-grandes
+  .section-gallery-circles {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+
+    // Respiro entre colunas e linhas
+    column-gap: 2.5em;
+    row-gap: 2.5em;
+  }
+}
+
+// Respiro no topo da galeria harmoniza com o padding do primeiro artigo
+@include breakpoint-down(medium) {
+  .section-gallery-circles {
+        padding-top: 12vw;
+  }
+}
+
+@include breakpoint-down(small) {
+  .section-gallery-circles {
+    // Limita o número de elementos por linha para 2. para telas pequenas
+    padding-top: 12vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8vw;
+    row-gap: 8vw;
+  }
+}

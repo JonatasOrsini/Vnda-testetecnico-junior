@@ -1,0 +1,237 @@
+
+// Ativa o encolhimento da barra de navegação, ver comentário em animations.js
+.anim-trigger{
+  position: relative;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+}
+
+.swiper-container {
+  z-index: 1;
+  height: 42vw;
+  width: 100%;
+
+  & > .swiper-wrapper {
+    background-color: rgb(255, 255, 255);
+
+    & > .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    & > .-slide1 {
+      & > * {
+        text-align: start;
+        margin: 0 0 0 20vw;
+        width: 100%;
+      }
+
+      background: linear-gradient($--hero-slide1bg-linear1),
+        linear-gradient($--hero-slide1bg-linear2), url(../images/slide-1.jpg);
+      background-size: cover;
+      background-position: bottom 0px left 0px;
+
+      & > .-slide1-title {
+        font-style: $--fs-hero-subtitle;
+        font-family: $--ff-playfair;
+        font-size: $--fz-hero-title;
+      }
+
+      & > .-slide1-subtitle {
+        font-style: $--fs-hero-subtitle;
+        font-family: $--ff-playfair;
+        font-size: $--fz-hero-subtitle;
+      }
+    }
+
+    & > .-slide2 {
+      & > * {
+        text-align: end;
+        margin: 0 20vw 0 0;
+        width: 100%;
+      }
+
+      background: linear-gradient($--hero-slide2bg-linear1),
+        linear-gradient($--hero-slide2bg-linear2), url(../images/slide-2.jpg);
+      background-size: cover;
+      background-position: bottom 0px left 0px;
+
+      & > .-slide2-title {
+        font-style: $--fs-hero-subtitle;
+        font-family: $--ff-playfair;
+        font-size: $--fz-hero-title;
+      }
+
+      & > .-slide2-subtitle {
+        font-style: $--fs-hero-subtitle;
+        font-family: $--ff-playfair;
+        font-size: $--fz-hero-subtitle;
+      }
+    }
+
+    & > .-slide3 {
+      & > * {
+        text-align: center;
+        width: 100%;
+      }
+
+      background: linear-gradient($--hero-slide3bg-linear1),
+        url(../images/slide-3.jpg);
+      background-size: cover;
+      background-position: bottom 0px left 0px;
+
+      & > .-slide3-title {
+        font-style: $--fs-hero-subtitle;
+        font-family: $--ff-playfair;
+        font-size: $--fz-hero-title;
+        margin-bottom: 0 !important;
+      }
+      & > .-slide3-subtitle {
+        font-style: $--fs-hero-subtitle;
+        font-family: $--ff-playfair;
+        font-size: $--fz-hero-subtitle;
+      }
+    }
+  }
+
+  & > .swiper-button-prev {
+    color: $--logo-color !important;
+    opacity: 0.3;
+    margin: 0 1vw;
+  }
+
+  & > .swiper-button-next {
+    color: $--logo-color !important;
+    opacity: 0.3;
+    margin: 0 1vw;
+  }
+
+  & > .swiper-pagination {
+    & > .swiper-pagination-bullet-active {
+      background: $--logo-color !important;
+    }
+  }
+}
+
+@include breakpoint-down(large) {
+  .swiper-container {
+    height: 60vw;
+    & > .swiper-wrapper {
+      & > .-slide1 {
+        background: linear-gradient($--hero-slide1bg-linear1-large),
+          url(../images/slide-1.jpg);
+
+        background-size: cover;
+        background-position: bottom 0px left 0px;
+        & > * {
+          align-self: flex-start;
+          margin: 0 0 0 0;
+          margin-left: 10vw;
+          width: 100%;
+        }
+
+        & > .-slide1-title {
+          font-size: 16vw;
+        }
+        & > .-slide1-subtitle {
+          font-size: 3.5vw;
+        }
+      }
+
+      & > .-slide2 {
+        background: linear-gradient($--hero-slide2bg-linear1-large),
+          url(../images/slide-2.jpg);
+
+        background-size: cover;
+        background-position: bottom 0px left 0px;
+
+        & > * {
+          align-self: flex-end;
+          margin: 0 0 0 0;
+          margin-right: 10vw;
+
+          width: 100%;
+        }
+
+        & > .-slide2-title {
+          font-size: 16vw;
+        }
+
+        & > .-slide2-subtitle {
+          margin-right: 10vw;
+          align-self: flex-end;
+          font-size: 3.5vw;
+        }
+      }
+
+      & > .-slide3 {
+        background: linear-gradient($--hero-slide3bg-linear1),
+          url(../images/slide-3.jpg);
+
+        background-size: cover;
+        background-position: bottom 0px left 0px;
+
+        & > * {
+          text-align: center;
+          margin: 0 0 0 0;
+          width: 100%;
+        }
+
+        & > .-slide3-title {
+          font-size: 16vw;
+        }
+
+        & > .-slide3-subtitle {
+          font-size: 3.5vw;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-down(medium) {
+  .swiper-container {
+    height: 70vw;
+  }
+
+  .swiper-container > .swiper-wrapper > .-slide1 > .-slide1-subtitle {
+    max-width: 52vw;
+    font-size: 4.8vw;
+  }
+  .swiper-container > .swiper-wrapper > .-slide2 > .-slide2-subtitle {
+    max-width: 50vw;
+    font-size: 4.8vw;
+  }
+  .swiper-container > .swiper-wrapper > .-slide3 > .-slide3-subtitle {
+    max-width: 60vw;
+    font-size: 4.8vw;
+  }
+}
+
+@include breakpoint-down(small) {
+  .swiper-container > .swiper-wrapper > .-slide1 > .-slide1-subtitle {
+    max-width: 60vw;
+    font-size: 5.5vw;
+  }
+  .swiper-container > .swiper-wrapper > .-slide2 > .-slide2-subtitle {
+    max-width: 50vw;
+    font-size: 5.5vw;
+  }
+  .swiper-container > .swiper-wrapper > .-slide3 > .-slide3-subtitle {
+    max-width: 65vw;
+    font-size: 6vw;
+  }
+
+  :root {
+    --swiper-navigation-size: 30px !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+  }
+}
