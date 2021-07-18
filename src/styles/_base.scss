@@ -1,0 +1,81 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  background: $--html-color;
+  font-family: $--ff-ptsans;
+  font-weight: $--font-weight400;
+}
+
+body {
+  position: relative;
+}
+
+// .tirateima {
+//   z-index: 99999;
+//   position: absolute;
+//   top: 2199px;
+//   right: 141px;
+//   width: 192.5px;
+//   height: 50px;
+//   background: rgb(173, 31, 31);
+// }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 4px dotted $--contrast-active-color;
+}
+
+body,
+ul,
+li,
+a,
+h4,
+h5,
+h2,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: $--ff-titles;
+  font-style: $--fs-titles;
+}
+
+a {
+  text-decoration: none;
+  color: $--col-white;
+}
+
+ul,
+li {
+  color: $--col-white;
+  text-decoration: none;
+  list-style: none;
+}
+
+h1 {
+  color: $--h1s-color;
+}
+
+// Default Icon style
+.fas,
+.far,
+.fab {
+  font-size: 1.25em;
+  color: $--menu-color;
+}
+
+.-icon-darkmode {
+  color: $--col-white;
+}

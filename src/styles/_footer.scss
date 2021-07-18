@@ -1,0 +1,480 @@
+// Todos styles contidos no footer são encontrados aqui.
+// animações podem ser encontradas em _animations.scss
+
+// Excessões
+// a barra de input de email reaproveita e modifica stylos definidos em _navigations.scss > .-inputbar
+
+// Styles para telas grandes
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  background: $--footer-bg-color;
+
+  // Filhos flex
+  & > * {
+    width: 100%;
+  }
+
+  // Wrapper contém os 3 containers do footer, não contém a assinatura da página. para telas grandes
+  & > .footer-wrapper {
+    display: flex;
+    flex: 1 1 90%;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    // Respiro entre o wrapper e a assinatura da página. para telas grandes
+    margin-bottom: 2em;
+
+    // Filhos flex
+    & > * {
+      width: 100%;
+    }
+
+    // Container Menu, Novidades, Produtos etc. para telas grandes
+    & > .footer-container-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      flex: 1 1 25%;
+      order: 1;
+
+      // Respiro entre o container e, o topo, e a esquerda do footer. para telas grandes
+      margin: 4em 0 0 10vw;
+
+      // Filhos flex
+      & > * {
+        width: 100%;
+      }
+
+      // Alinhamento do logo. para telas grandes
+      & > .footer-menu-title {
+        text-align: left;
+
+        // Tamanho do logo encolhido. para telas grandes
+        & > .footer-logo {
+          & > .footer-logo-svg {
+            height: 32px;
+          }
+        }
+      }
+
+      // Container dos submenus. para telas grandes
+      & > .footer-menu {
+        display: flex;
+
+        justify-content: stretch;
+        align-items: stretch;
+
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+
+        // Respiro entre o logo e os submenus. para telas grandes
+        margin-top: 1.95em;
+
+        // Filhos flex
+        & > * {
+          width: 50%;
+        }
+
+        // Respiro entre a primeira e a segunda linha dos submenus. para telas grandes
+        &:nth-child(1),
+        :nth-child(2) {
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+
+    // Contém o "fale conosco", a barra de email e seu botão. para telas grandes
+    & > .footer-container-middle {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+
+      order: 2;
+
+      flex: 4 1 50%;
+
+      // Respiro entre o topo do footer e os containers ao seu redor. para telas grandes
+      margin: 4em 1em 0 1em;
+
+      // Filhos flex
+      & > * {
+        width: 100%;
+      }
+
+      // Alinhamento do "fale conosco". para telas grandes
+      & > .footer-contato-title {
+        text-align: left;
+      }
+
+      // Contém a barra de email e seu botão "Enviar". para telas grandes
+      & > .footer-contato {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        // Respiro entre o "fale conosco" e a barra de email. para telas grandes
+        margin-top: 2em;
+
+        // Filhos flex
+        & > * {
+          width: 100%;
+        }
+
+        // Form
+        & > .footer-contato-submenu {
+          display: flex;
+          overflow-y: hidden;
+          flex: 0 0;
+
+          justify-content: space-between;
+          align-items: stretch;
+
+          // Filhos flex
+          & > * {
+            width: 100%;
+          }
+
+          // Barra de email. para telas grandes
+          & > .-input-footer {
+            position: static;
+            height: 2.8125em;
+
+            font-style: $--fs-inputbar;
+            padding-left: 0.5em;
+            border: 4px solid $--base-color;
+            border-radius: 10px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-right: 0;
+          }
+
+          // Botão "Enviar". para telas grandes
+          & > .button-enviar-footer {
+            flex: 20%;
+
+            color: $--button-font-color;
+
+            border: 0.25em solid transparent;
+            border-radius: 0.625em;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            border-left: 0;
+            background: $--button-color;
+          }
+        }
+      }
+    }
+    // Container socials, instagram e facebook. para telas grandes
+    & > .footer-container-right {
+      display: flex;
+      flex-direction: column;
+
+      order: 3;
+      flex: 1 1 25%;
+
+      // Respiro entre o container socials e o footer. para telas grandes
+      margin: 4em 10vw 0 0;
+
+      // Filhos flex
+      & > * {
+        width: 100%;
+      }
+
+      // Título "socials". para telas grandes
+      & > .footer-socials-title {
+        text-align: right;
+      }
+
+      // Container dos submenus textos instagram, facebook e seus respectivos icones. para telas grandes
+      & > .footer-socials {
+        display: flex;
+        flex-direction: column;
+
+        // Alinhamento dos submenus instagram e facebook. para telas grandes
+        text-align: right;
+        margin-top: 2em;
+
+        // Filhos flex
+        & > * {
+          width: 100%;
+          align-self: center;
+        }
+
+        // Itens do submenu instagram, facebook. para telas grandes
+        & > .footer-socials-submenu {
+          display: flex;
+          flex: 1 1 100%;
+
+          // Alinhamento dos itens do submenu instagram, facebook. para telas grandes
+          justify-content: flex-end;
+          align-items: center;
+
+          // Filhos flex
+          & > * {
+            width: 100%;
+          }
+
+          // Respiro entre a primeira e a segunda linhas dos itens do submenu instagram, facebook. para telas grandes
+          &:nth-child(1) {
+            margin-bottom: 0.375em;
+          }
+
+          // Links do submenu instagram, facebook. para telas grandes
+          & > a {
+            display: flex;
+            flex: 0 1;
+
+            // Alinhamento dos links do submenu instagram, facebook. para telas grandes
+            justify-content: center;
+            align-items: center;
+
+            // Respiro entre os ícones e os textos do submenu instagram, facebook. para telas grandes
+            &:not(:first-child) {
+              margin-left: 0.5em;
+            }
+
+            // Ajuste de tamanho do ícone instagram do submenu instagram, facebook. para telas grandes
+            & > .fa-instagram {
+              transition: all 300ms ease-in-out;
+              font-size: 1.785em;
+            }
+
+            // Ajuste de tamanho do ícone instagram do submenu instagram, facebook. para telas grandes
+            & > .fa-facebook {
+              transition: all 300ms ease-in-out;
+              font-size: 1.5625em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //  Wrapper contém a assinatura da página. para telas grandes
+  & > .footer-wrapper-company {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+
+    // Alinhamento do wrapper. para telas grandes
+    text-align: center;
+
+    flex: 1 1 10%;
+
+    // Filhos flex
+    & > * {
+      width: 100%;
+    }
+
+    // Container da assinatura da página. para telas grandes
+    & > .-company-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      // Assinatura da página. para telas grandes
+      & > .-company-footer {
+        font-style: $--fs-italic;
+        font-size: $--fz-footer-sign;
+        letter-spacing: 0.0625em;
+
+        // Respiro entre a assinatura da página e o footer. para telas grandes
+        margin: 3em 10vw;
+      }
+    }
+  }
+}
+
+// Helper class aplica styles aos 2 títulos do footer "fale conosco" e "socials". independente de telas
+.-footer-title {
+  font-size: 2rem;
+  font-family: $--ff-playfair;
+  font-style: $--fz-hero-title;
+  font-weight: $--font-weight400;
+}
+
+// Styles para telas médias
+@include breakpoint-down(medium) {
+  .footer {
+    & > .footer-wrapper {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      align-content: center;
+
+      & > .footer-container-left {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        flex: 1 1;
+
+        margin: 4em 0 0 10vw;
+
+        & > .footer-menu {
+          flex-direction: row;
+          margin-top: 2.7em;
+        }
+      }
+
+      & > .footer-container-middle {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+
+        order: 3;
+
+        width: 100%;
+
+        flex: 1 1 auto;
+
+        margin: 4em 10vw 0 10vw;
+      }
+
+      & > .footer-container-right {
+        order: 2;
+        flex: 1 1;
+
+        justify-content: center;
+        align-items: center;
+
+        margin: 4em 10vw 0 0;
+      }
+    }
+
+    // Respiro da assinatura. para telas médias
+    & > .footer-wrapper-company {
+      & > .-company-container {
+        & > .-company-footer {
+          margin: 2em 10vw;
+        }
+      }
+    }
+  }
+}
+
+// Footer para telas pequenas
+@include breakpoint-down(small) {
+  .footer {
+    // Muda a direção do wrapper "Menu, Novidades, Produtos etc". para telas pequenas
+    & > .footer-wrapper {
+      flex-direction: column;
+
+      // Container "Menu, Novidades, Produtos etc". para telas pequenas
+      & > .footer-container-left {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        flex: 1 1;
+        width: 80%;
+
+        // Margins do container "Menu, Novidades, Produtos etc". para telas pequenas
+        margin: 4em 10vw 0 10vw;
+
+        // Mudando alinhamento do Logo. para telas pequenas
+        & > .footer-menu-title {
+          text-align: center;
+        }
+
+        & > .footer-menu {
+          // Mudando orientação dos submenus "Menu, Novidades, Produtos etc". para telas pequenas
+          flex-direction: column;
+
+          // Mudando alinhamento dos submenus "Menu, Novidades, Produtos etc". para telas pequenas
+          text-align: center;
+          align-items: center;
+
+          // Respiro entre o Logo e os submenus. para telas pequenas
+          margin-top: 1.5em;
+
+          // Linpando as margins dos submenus de telas grandes
+          &:nth-child(1),
+          :nth-child(2) {
+            margin-bottom: 0em;
+          }
+          // Novas margins dos submenus. para telas pequenas
+          & > .footer-menu-submenu {
+            margin-bottom: 0.5em;
+          }
+        }
+      }
+
+      // Container "Contato, Emails". para telas pequenas
+      & > .footer-container-middle {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+
+        order: 3;
+
+        width: 80%;
+
+        flex: 1 1 80%;
+
+        // Margins do container "Contato, Emails". para telas pequenas
+        margin: 1.5em 10vw 0 10vw;
+
+        // Mudando alinhamento do título "fale conosco"
+        & > .footer-contato-title {
+          text-align: center;
+        }
+
+        // Respiro entre o título "fale conosco" e a barra de email
+        & > .footer-contato {
+          margin-top: 1.5em;
+        }
+      }
+      // Container socials, instagram, facebook para telas pequenas
+      & > .footer-container-right {
+        order: 2;
+        flex: 1 1 80%;
+
+        justify-content: center;
+        align-items: center;
+
+        // Marings do container socials para telas pequenas
+        margin: 1em 10vw 0 10vw;
+
+        // Mudando alinhamento do título "socials" para telas pequenas
+        & > .footer-socials-title {
+          text-align: center;
+        }
+
+        // Mudando alinhamento dos submenus "instagram, facebook" para telas pequenas
+        & > .footer-socials {
+          // Respiro entre o "socials" e os submenus para telas pequenas
+          margin-top: 1.5em;
+          & > .footer-socials-submenu {
+            justify-content: center;
+
+            &>.-insta-text-footer{
+              margin-right: 0.5em;
+
+            }
+
+            &>.-face-text-footer{
+              margin-right: 1em;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

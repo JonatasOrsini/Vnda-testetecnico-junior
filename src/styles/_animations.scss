@@ -1,0 +1,515 @@
+// Os styles a seguir são utilizados em  animations.js
+
+// Encolher a barra de navegação, trocar os elementos e core de fundo assim como mudar os tamanhos dos elementos
+// Maires comentários podem ser encontrados em animations.js
+
+// Ver comentário em animation.js
+.anim-trigger {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+}
+
+// Animação cresce a barra de navegação
+@keyframes grow-bar {
+  from {
+    max-height: 65px;
+    background-position: 100% 100%;
+  }
+
+  to {
+    background-position: 0% 0%;
+  }
+}
+
+// Classe injeta a animação em animation.js
+.grow-bar {
+  animation: grow-bar 300ms ease forwards;
+}
+
+// Animação encolhe a barra de navegação
+@keyframes shrink-bar {
+  from {
+    max-height: 200px;
+    background-position: 0% 0%;
+  }
+  to {
+    max-height: 65px;
+    background-position: 100% 100%;
+  }
+}
+
+// Classe injeta a animação em animation.js
+.shrink-bar {
+  animation: shrink-bar 300ms ease forwards;
+}
+
+// Animação encolhe o logo da barra de navegação
+@keyframes shrink-logo {
+  from {
+    max-height: inherit;
+  }
+  to {
+    max-height: 32px;
+  }
+}
+
+// Classe injeta a animação em animation.js
+.shrink-logo {
+  animation: shrink-logo 300ms ease forwards;
+}
+
+// Animação cresce o logo da barra de navegação
+@keyframes grow-logo {
+  from {
+    max-height: 32px;
+  }
+  to {
+    max-height: inherit;
+  }
+}
+
+// Classe injeta a animação em animation.js
+.grow-logo {
+  animation: grow-logo 300ms ease forwards;
+}
+
+// Animação muda a cor do logo da barra de navegação para fundo escuro
+@keyframes changelogo-svgcolor {
+  from {
+    filter: saturate(1149%);
+  }
+  to {
+    filter: saturate(0%);
+  }
+}
+
+// Classe injeta a animação em animation.js
+.changelogo-svgcolor {
+  transition: all 300ms ease-in-out;
+  animation: changelogo-svgcolor 300ms ease forwards;
+}
+
+// Animação reverte a cor do logo da barra de navegação
+@keyframes revertlogo-svgcolor {
+  from {
+    filter: saturate(0%);
+  }
+  to {
+    filter: saturate(1149%);
+  }
+}
+
+// Classe injeta a animação em animation.js
+.revert-svgcolor {
+  animation: revertlogo-svgcolor 300ms ease forwards;
+}
+
+// Cor ativa do logo
+#activelogo-svgcolor {
+  filter: invert(53%) sepia(15%) saturate(1808%) hue-rotate(79deg)
+    brightness(93%) contrast(96%);
+}
+
+.nav-logo-svg {
+  transition: all 300ms ease-in-out;
+}
+
+.footer-logo-svg {
+  transition: all 300ms ease-in-out;
+}
+
+// Helper id utilizado em animations.js
+#hamburger-hover {
+  background-color: $--active-color;
+
+  &:hover,
+  &:focus {
+    background-color: $--active-color;
+  }
+}
+
+// Helper id utilizado em animations.js
+#icon-darkmode {
+  color: $--base-color;
+
+  &:hover,
+  &:focus {
+    color: $--active-color;
+  }
+}
+
+// Helper id utilizado em animations.js
+#hamburger-darkmode {
+  background-color: $--base-color;
+
+  &:hover,
+  &:focus {
+    background-color: $--active-color;
+  }
+}
+
+// Helper id utilizado em animations.js
+#inputbar-darkmode {
+  border: 4px solid $--active-color;
+
+  &:hover,
+  &:focus {
+    border: 4px solid $--contrast-active-color;
+  }
+}
+
+// Helper id utilizado em animations.js
+#menu-darkmode {
+  color: $--base-color;
+
+  &:hover,
+  &:focus {
+    color: $--active-color;
+  }
+}
+
+// Hover swipper buttons
+
+.swiper-container > .swiper-button-next {
+  transition: all 300ms ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.swiper-container > .swiper-button-prev {
+  transition: all 300ms ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Os styles a seguir são utilizados em  _section-gallery-circles.scss para:
+// Acrescenta active-state e eye-candy para o visitante enquanto o cursor passa pelas imagens da sessão
+
+// Classe injeta a animação abaixo
+.gallery-hover-in {
+  animation: img-hover-anim 500ms ease forwards;
+  transition: all 500ms ease-in;
+}
+
+// Animação bounce on hover nos links das imagens da sessão gallery-circles
+@keyframes img-hover-anim {
+  0% {
+    transform: scale(100%);
+  }
+  20% {
+    transform: scale(100%);
+  }
+  40% {
+    transform: scale(80%);
+  }
+  80% {
+    transform: scale(115%);
+  }
+  90% {
+    transform: scale(105%);
+  }
+  100% {
+    transform: scale(115%);
+  }
+}
+
+// Esconde e revela a barra de pesquina da barra de navegação
+
+.-inputbar-hidden {
+  animation: inputbar-hidden 300ms ease-in-out forwards;
+}
+
+.-inputbar-expand {
+  animation: inputbar-expand 300ms ease-in-out forwards;
+}
+
+@keyframes inputbar-expand {
+  0% {
+    visibility: hidden;
+    max-width: 0px;
+    opacity: 0;
+  }
+  1% {
+    display: inline-block;
+    visibility: visible;
+  }
+  99% {
+  }
+  100% {
+    max-width: unset;
+    opacity: 1;
+  }
+}
+
+@keyframes inputbar-hidden {
+  0% {
+    max-width: unset;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    max-width: 0px;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+// Os styles a seguir são utilizados em  animations.js
+// Acrescenta active-state em mouse over
+
+//  Helper class
+.active-icon {
+  color: $--active-color;
+}
+
+//  Helper class
+#active-footer {
+  color: $--active-color;
+}
+
+// Adiciona transição
+.button-enviar-footer {
+  transition: all 300ms ease-in-out;
+}
+
+// Adiciona transição
+.-insta-text-footer {
+  transition: all 300ms ease-in-out;
+}
+
+// Adiciona transição
+.-face-text-footer {
+  transition: all 300ms ease-in-out;
+}
+
+// Active state dos submenus do footer. Novidades, Produtos, Blog, Portal
+// Muda de cor e revela borda escondida
+.footer {
+  & > .footer-wrapper {
+    & > .footer-container-left {
+      & > .footer-menu {
+        & > .footer-menu-submenu > a {
+          border-bottom: 2px solid transparent;
+          transition: all 300ms ease-in-out;
+          &:hover {
+            border-bottom: 0.125em solid $--active-color;
+            color: $--active-color;
+          }
+        }
+      }
+    }
+
+    // Active state da barra de email do footer e seu botão
+    // Muda a cor da borda e ajusta o outline quando há focus no botão
+    & > .footer-container-middle {
+      & > .footer-contato {
+        & > .footer-contato-submenu {
+          // Active state da barra de email
+          & > .-input-footer {
+            &:hover {
+              border: 0.25em solid $--menu-color;
+              border-right: 0;
+            }
+            &:focus {
+              border: 0.24em solid $--active-color;
+              border-right: 0;
+            }
+          }
+
+          // Active state do botão "Enviar"
+          & > .button-enviar-footer {
+            &:hover {
+              border: 0.25em solid $--active-color;
+              border-left: 0;
+              background: $--button-color;
+            }
+
+            // Focus
+            &:focus-visible {
+              outline: none;
+              border: 0.25em dotted $--contrast-active-color;
+              border-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // Timmings de transição do active state hover dos ícones e textos Instagram e Facebook do footer
+    & > .footer-container-right {
+      & > .footer-socials {
+        & > .footer-socials-submenu {
+          & > a {
+            & > .fa-instagram {
+              transition: all 300ms ease-in-out;
+            }
+
+            & > .fa-facebook {
+              transition: all 300ms ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Hover botoes do swiper do article3 instagram
+.main > .main-container > .main-wrapper > .main-article3 > .swiper-button-prev,
+.main > .main-container > .main-wrapper > .main-article3 > .swiper-button-next {
+  transition: all 300ms ease-in-out;
+  &:hover {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+// Hover slides instagram
+.main > .main-container > .main-wrapper > .main-article3 > .swiperi-container {
+  > .swiper-wrapper {
+    > .swiper-slide {
+      > .slidetext {
+        transition: all 300ms ease-in-out;
+        &:hover {
+          background: rgba(0, 0, 0, 0.9);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// Hover dos botoes do swiper da sessao historia
+.main
+  > .main-container
+  > .main-wrapper
+  > .main-article2
+  > .main-article2-aside-right
+  > .swiper-button-prev,
+.main
+  > .main-container
+  > .main-wrapper
+  > .main-article2
+  > .main-article2-aside-right
+  > .swiper-button-next {
+  transition: all 300ms ease-in-out;
+  &:hover {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+// Hover dos botoes do swiper do full banner
+.botao-mobile:hover,
+.botao-mobile:focus {
+  transition: all 300ms ease-in-out;
+  transform: scale(1.15);
+  box-shadow: 0px 4px 15px 2px rgba(0, 0, 0, 0.3);
+}
+
+// Revela menu mobile
+#menu-appear {
+  animation: menu-appear 300ms ease-in-out forwards;
+}
+
+@keyframes menu-appear {
+  0% {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    display: flex;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Esconde menu mobile
+#menu-disappear {
+  animation: menu-disappear 300ms ease-in-out forwards;
+}
+
+@keyframes menu-disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+#shrink-mobile-wrapper {
+  animation: shrink-mobile-wrapper 500ms ease-in-out forwards;
+}
+
+#expand-mobile-wrapper {
+  animation: expand-mobile-wrapper 500ms ease-in-out forwards;
+}
+
+@keyframes expand-mobile-wrapper {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    width: 100vw;
+    height: 100vh;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shrink-mobile-wrapper {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    width: 1px;
+    height: 1px;
+  }
+}
+
+// Revela o overlay container da searchbar e icones e a ponta tambem
+#revealoverlay {
+  visibility: visible;
+  opacity: 1;
+  max-height: unset;
+}
+
+.mobile-button:hover{
+  background-color: $--active-color !important;
+}
+
+.change-overlay-rightcorner{
+  border-top-right-radius: 0px!important;
+}
+
+.change-overlay-height{
+  height: 200px!important;
+}
+
+#menu-disappear-context{
+  max-height: 0;
+  opacity: 0;
+  display: none;
+}
+
+#menu-appear-context{
+  max-height: unset;
+  opacity: 1;
+  display: flex;
+}

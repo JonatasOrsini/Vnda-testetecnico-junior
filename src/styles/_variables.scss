@@ -1,0 +1,262 @@
+// Paddings
+$--pad-10vw: 10vw;
+
+$--pad-1rem: 1rem;
+$--pad-2rem: 2rem;
+$--pad-4rem: 4rem;
+
+$--pad-4rem: 4rem;
+
+//  Section article1 surtitle paddings
+$--main-article1-surtitle-top: $--pad-4rem;
+$--main-article1-surtitle-left: $--pad-10vw;
+
+//  Section article1 title paddings
+$--main-article1-title-top: $--pad-2rem;
+$--main-article1-title-left: $--pad-10vw;
+
+//  Section article1 paragraph paddings
+$--main-article1-p-top: $--pad-2rem;
+$--main-article1-p-left: $--pad-10vw;
+
+// Section main article1 paragraph Line Height
+$--lh-1-4: 1.4;
+
+
+// Main article1 section paragraph Letter Spacing
+$--lh-main-article1-p: $--lh-1-4;
+
+// Main article1 aside banner subtitle Letter Spacing
+$--lh-article1-banner-subtitle: $--lh-1-4;
+
+//
+//
+
+// Letter Spacing variables
+$--ls-1-5px: 1.5px;
+$--ls-25px: 25px;
+
+// Section main article1 paragraph Letter Spacing
+$--ls-main-article1-p: $--ls-1-5px;
+
+// Section main article1 surtitle Letter Spacing
+$--ls-main-article1-surtitle: $--ls-25px;
+
+//
+//
+
+// Max Width variables
+$--mw-29 : 29%;
+$--mw-25 : 25%;
+
+// Section main article1 paragraph Max Width
+$--mw-main-article1-p: $--mw-25;
+
+//
+//
+
+// Margins
+
+// Margin left and right > sides
+$--mg-sides-10vw: 10vw;
+$--mg-sides-5vw: 5vw;
+$--mg-sides-0: 0;
+
+// Margin top > Height
+$--mg-height-0: 0;
+$--mg-height-1rem: 1rem;
+$--mg-height-2rem: 2rem;
+$--mg-height-4rem: 4rem;
+
+// Nav container margin
+$--mg-nav-height: $--mg-height-1rem;
+$--mg-nav-sides: $--mg-sides-10vw;
+
+// Nav logo container margin
+$--mg-nav-logo-container-height: $--mg-height-2rem;
+$--mg-nav-logo-container-sides: $--mg-sides-0;
+
+// Nav menu container margin
+$--mg-nav-menu-container-height: $--mg-height-2rem;
+$--mg-nav-menu-container-sides: $--mg-sides-0;
+
+// Nav icon wrapper margin
+$--mg-nav-icon-wrapper-height: $--mg-height-2rem;
+$--mg-nav-icon-wrapper-sides: $--mg-sides-0;
+
+// Section gallery container margin
+$--mg-gallery-sides: $--mg-sides-10vw;
+$--mg-gallery-height: $--mg-height-4rem;
+
+// Article1 aside banner title margin
+$--mg-article1-banner-title-height: $--mg-height-1rem;
+
+// Article1 aside banner subtitle margin
+$--mg-article1-banner-subtitle-height: $--mg-height-1rem;
+
+//
+//
+
+// Font-familys variables
+$--ff-playfair: "Play fair Display", serif;
+$--ff-ptsans: "PT Sans", sans-serif;
+
+// Main article1 aside banner title
+$--ff-article1-banner-title : $--ff-playfair;
+$--ff-titles: $--ff-playfair;
+$-ff-main-article1-surtitle: $--ff-ptsans;
+
+// Font-sizes variables
+$--fz-0-75rem: 0.75rem;
+$--fz-1rem: 1rem;
+$--fz-1-15rem: 1.15rem;
+$--fz-1-25rem: 1.25rem;
+$--fz-3rem: 3rem; // 54px
+$--fz-3-375rem: 3.375rem; // 54px
+$--fz-2rem: 2rem;
+$--fz-vw-small: 2.373737vw;
+$--fz-vw-big: 10.212121vw;
+
+// Section Main title font-size
+$--fz-main-article1-title: $--fz-3rem;
+
+// Hero title font-sizes
+$--fz-hero-title: $--fz-vw-big;
+
+// Hero subtitle font-sizes
+$--fz-hero-subtitle: $--fz-vw-small;
+
+// Section main article1 paragraph
+$--fz-main-article1-aside-title: $--fz-1rem;
+
+// Section main article1 paragraph
+$--fz-main-article1-p: $--fz-1-25rem;
+
+// Footer assinatura
+$--fz-footer-sign: $--fz-0-75rem;
+
+$--fz-main-article1-aside-subtitle: $--fz-1-15rem;
+
+// Main article1 aside title Font-Size
+$--fz-main-article1-aside-title: $--fz-2rem;
+
+// Font weight variables
+$--font-weight400: 400;
+$--font-weight700: 700;
+
+$--fw-menu-weight: $--font-weight400;
+$--fw-main-article1-surtitle: $--font-weight400;
+
+// Font style variables
+$--fs-italic: italic;
+$--fs-normal: normal;
+
+$--fs-inputbar: $--fs-italic;
+$--fs-hero-title: $--fs-italic;
+$--fs-hero-subtitle: $--fs-italic;
+$--fs-titles: $--fs-italic;
+$--fs-main-article1-title: $--fs-italic;
+
+$--fs-main-article1-p: $--fs-normal;
+$--fs-article1-banner-title: $--fs-italic;
+
+// Collor Palette
+$--col-pink: #f23355;
+$--col-darkpink: #a6021f;
+$--col-notsodarkpink: #c9082c;
+$--col-brightgreen: #33f256;
+$--col-green: #2fa143;
+$--col-darkgreen: #26592f;
+$--col-blackgreen: #142714;
+$--col-white: #ffffff;
+$--col-whitegray: #f3f3f3;
+$--col-brightgray: #dddddd;
+$--col-midgray: #c4c4c4;
+$--col-coolblack: #333333;
+$--col-deepblack: #151515;
+$--col-transparent: #00000000;
+$--col-transparent10: #00000010;
+$--col-transparent20: #00000020;
+
+$--col-white90: #ffffffd5;
+$--col-white80: #ffffffb2;
+$--col-white50: #ffffff80;
+$--col-white20: #ffffff20;
+$--col-white0: #ffffff00;
+
+// Hero background gradient
+
+// Hero Slide 1 default
+// linear1
+$--hero-slide1bg-linear1: 0.25turn, $--col-white80, $--col-white80,
+  $--col-white80, $--col-white0, $--col-white0;
+// linear2
+$--hero-slide1bg-linear2: 0.5turn, $--col-white80, $--col-white80, $--col-white0,
+  $--col-white0, $--col-white0;
+
+// Hero slide 1 Large
+$--hero-slide1bg-linear1-large: 0.5turn, $--col-white80, $--col-white80,
+  $--col-white50, $--col-white50;
+
+//   Hero slide 2 default
+// linear1
+$--hero-slide2bg-linear1: 0.75turn, $--col-white80, $--col-white80,
+  $--col-white50, $--col-white50, $--col-white0, $--col-white0;
+// linear2
+$--hero-slide2bg-linear2: 0.5turn, $--col-white, $--col-white80, $--col-white0,
+  $--col-white0, $--col-white0, $--col-white0, $--col-white0, $--col-white0,
+  $--col-white0;
+
+//   Hero slide 2 bp large
+
+$--hero-slide2bg-linear1-large: 0.75turn, $--col-white80, $--col-white80,
+  $--col-white80, $--col-white80, $--col-white50, $--col-white0;
+
+//   Hero slide 3 bp default
+$--hero-slide3bg-linear1: 0.5turn, $--col-white, $--col-white80, $--col-white80,
+  $--col-white80;
+
+//   Hero slide 3 bp large
+$--hero-slide3bg-linear1: 0.5turn, $--col-white, $--col-white90, $--col-white80,
+  $--col-white80, $--col-white80, $--col-white20;
+
+//  Section main article1 surtitle color
+$--col-main-article1-surtitle: $--col-midgray;
+
+//  Section main article1 title color
+$--col-main-article1-title: $--col-white;
+
+// Section main article1 paragraph color
+$--col-main-article1-p: $--col-white;
+
+// Switch colors here to customize the whole site (under construction)
+$--base-color: $--col-white;
+$--menu-color: $--col-darkgreen;
+$--active-color: $--col-green;
+$--contrast-color: $--col-darkpink;
+$--contrast-alt-color: $--col-notsodarkpink;
+$--contrast-active-color: $--col-pink;
+
+$--col-main-article1-aside-banner-bg: $--col-blackgreen;
+
+$--main-article1: $--col-brightgray;
+$--main-article1-section-left: $--col-darkgreen;
+$--main-article1-aside-right: $--col-blackgreen;
+
+$--html-color: $--col-whitegray;
+$--tagmain-color: $--html-color;
+$--h1s-color: $--col-darkgreen;
+$--p-color: $--col-darkgreen;
+$--logo-color: $--col-darkgreen;
+
+$--button-font-color: $--col-white;
+$--button-color: $--menu-color;
+
+// Navigation bar background linear gradient colors
+$--bg-linear-gradient1: $--col-transparent;
+$--bg-linear-gradient2: $--col-transparent;
+$--bg-linear-gradient3: $--col-darkgreen;
+$--bg-linear-gradient4: $--col-blackgreen;
+
+// Footer
+$--footer-bg-color: $--col-deepblack;

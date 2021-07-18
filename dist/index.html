@@ -1,25 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/79634d8620.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
-    <link rel="stylesheet" href="styles/style.css">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
-    <title>Men's Vintage Shoes | Shoo</title>
-</head>
-<body>
-    <nav>
-        <img src="images/logo.png" alt="">
+    <link rel="icon" href="images/pageiconb.png">
+    <title> Velas Aromáticas | Shoo</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <section class="nav-wrapper">
+        <div class="nav-logo-container">
+          <a class="nav-logo" href="#">
+            <img
+              class="nav-logo-svg"
+              src="./images/logo.png"
+              alt="Logo SVG"
+              draggable="false"
+            />
+          </a>
+        </div>
+        <div class="nav-menu-container">
+          <li class="nav-menu">
+            <a class="-item" href="#">Início</a>
+            <a class="-item" href="#">Novidades</a>
+            <a class="-item" href="#">Produtos</a>
+            <a class="-item" href="#">Blog</a>
+            <a class="-item" href="#">Contato</a>
+          </li>
+        </div>
+        <div class="nav-icons-wrapper">
+          <input
+            class="-inputbar -inputbar-hidden"
+            type="text"
+            name="pesquisa"
+            placeholder="Pesquisar"
+            maxlength="40"
+          />
+          <li class="nav-icons-container">
+            <a class="-icon-link -search-link" href="#" onClick="return false;">
+              <i class="fas fa-search -icon"></i>
+            </a>
+            <div class="container-tip -searchtip"></div>
+            <a class="-icon-link -user-link" href="#" onClick="return false;">
+              <i class="fas fa-user -icon"></i>
+            </a>
+            <div class="container-tip -usertip"></div>
+            <aside class="overlay-active-icons">
+              <div class="-usercontext">
+                <h2 class="-usercontext-title">Login</h2>
+                <input class="-loginbar" type="text" name="login" placeholder="Usuário" maxlength="40"/>
+                <input class="-passwordbar" type="text" name="password" placeholder="Senha" maxlength="40"/>
+                <h4 class="-usercontext-subtitle">Não possui conta ainda?<br> <a class="-usercontext-register" href="#">Clique aqui</a> para se cadastrar.</h4>
+              </div>
+              <div class="-shopcontext">
+                <h2 class="-shopcontext-subtitle">Não há produtos no carrinho.</h2>
+              </div>
+            </aside>
+            <a class="-icon-link -shop-link" href="#" onClick="return false;">
+              <i class="fas fa-shopping-cart -icon"></i>
+            </a>
+            <div class="container-tip -shoptip"></div>
+            <a class="-icon-link -hamburger-link" href="#" onClick="return false;">
+              <div class="hamburger-wrapper">
+                <span class="hamburger-menu-rows -row1"></span>
+                <span class="hamburger-null"></span>
+                <span class="hamburger-menu-rows -row2"></span>
+                <span class="hamburger-null"></span>
+                <span class="hamburger-menu-rows -row3"></span>
+              </div>
+            </a>
+          </li>
+          </li>
+        </div>
+      </section>
+      <section id="shrink-mobile-wrapper" class="mobile-menu-wrapper">
+        <section id="menu-disappear" class="mobile-menu-background"></section>
+        <section id="menu-disappear" class="mobile-menu-container">
+          <li class="mobile-menu-items">
+              <a class= "-mobile-menu -mobile-inicio" href="#">Início</a>
+              <a class= "-mobile-menu -mobile-novidades"  href="#">Novidades</a>
+              <a class= "-mobile-menu -mobile-produtos"  href="#">Produtos</a>
+              <a class= "-mobile-menu -mobile-blog"  href="#">Blog</a>
+              <a class= "-mobile-menu -mobile-contato"  href="#">Contato</a>
+          </li>
+          <li class="mobile-menu-buttons">
+            <a class="mobile-button search-button "href="#">
+              <i class="fas fa-search -icon"></i>
+            </a>
+            </a>
+            <a class="mobile-button user-button" href="#">
+              <i class="fas fa-user -icon"></i>
+            </a>
+            <a class="mobile-button shop-button"  href="#">
+              <i class="fas fa-shopping-cart -icon"></i>
+            </a>
+          </li>
+          <li id="menu-disappear-context" class="section-active-button">
+            <aside class="overlay-active-icons">
+              <div id="menu-disappear-context" class="-searchcontext">
+                <input class="-inputbar" type="text" name="pesquisa" placeholder="Pesquisar" maxlength="40"/>
+              </div>
+              <div id="menu-disappear-context" class="-usercontext">
+                <h2 class="-usercontext-title">Login</h2>
+                <input class="-loginbar" type="text" name="login" placeholder="Usuário" maxlength="40"/>
+                <input class="-passwordbar" type="text" name="password" placeholder="Senha" maxlength="40"/>
+                <h4 class="-usercontext-subtitle">Não possui conta ainda?<br> <a class="-usercontext-register" href="#">Clique aqui</a> para se cadastrar.</h4>
+              </div>
+              <div id="menu-disappear-context" class="-shopcontext">
+                <h2 class="-shopcontext-subtitle">Não há produtos no carrinho.</h2>
+              </div>
+            </aside>
+          </li>
+        </section>
+      </section>
     </nav>
     <header>
-        <div>.</div>
+      <section class="anim-trigger"></section>
+      <section class="swiper-container">
+        <section class="swiper-wrapper">
+          <article class="swiper-slide -slide1">
+            <h1 class="-slide1-title">Cara nova</h1>
+            <h1 class="-slide1-subtitle">
+              A Shoo se adaptou e está cheia de novidades para você
+            </h1>
+          </article>
+          <article class="swiper-slide -slide2">
+            <h1 class="-slide2-title">Loja online</h1>
+            <h1 class="-slide2-subtitle">compre do conforto da sua casa</h1>
+          </article>
+          <article class="swiper-slide -slide3">
+            <h1 class="-slide3-title">Shoo next</h1>
+            <h1 class="-slide3-subtitle">
+              Nossa nova linha de velas é aquilo você estava procurando
+            </h1>
+          </article>
+        </section>
+      <aside class="swiper-button-prev"></aside>
+      <aside class="swiper-button-next"></aside>
+      </section>
     </header>
-
+    <section class="section-gallery-circles">
+      <a class="-gallery-img" href="#" draggable="false">
+        <img src="./images/gallery1.jpg" alt="circles-img1" draggable="false" />
+      </a>
+      <a class="-gallery-img" href="#" draggable="false">
+        <img src="./images/gallery2.jpg" alt="circles-img2" draggable="false" />
+      </a>
+      <a class="-gallery-img" href="#" draggable="false">
+        <img src="./images/gallery3.jpg" alt="circles-img3" draggable="false" />
+      </a>
+      <a class="-gallery-img" href="#" draggable="false">
+        <img src="./images/gallery4.jpg" alt="circles-img4" draggable="false" />
+      </a>
+      <a class="-gallery-img" href="#" draggable="false">
+        <img src="./images/gallery5.jpg" alt="circles-img5" draggable="false" />
+      </a>
+      <a class="-gallery-img" href="#" draggable="false">
+        <img src="./images/gallery6.jpg" alt="circles-img6" draggable="false" />
+      </a>
+    </section>
+    <main class="main">
+      <div class="main-container">
+        <section class="main-wrapper">
+          <article class="main-article1">
+            <section class="main-article1-section-left">
+              <h4 class="main-article1-surtitle">HISTÓRIA</h4>
+              <h2 class="main-article1-title">Tradição de família</h2>
+              <p class="main-article1-p">
+                A Shoo nasceu pelo amor por cheirinhos e a vontade de
+                empreender.<br /><br />Escolhemos todos os aromas da Shoo
+                minuciosamente para que você aprecie aquele seu momento especial
+                ou ao lado de quem gosta.
+              </p>
+            </section>
+            <aside class="main-article1-aside-right">
+              <div class="main-article1-banner1">
+                <img
+                  class="-article1-banner1-cover"
+                  src="images/banner1.jpg"
+                  alt="article1-banner1img"
+                  draggable="false"
+                />
+                <h1 class="-article1-banner-title">Origem</h1>
+                <p class="-article1-banner-subtitle">
+                  De família descendente indiana a Shoo foi fundada em 1998 por
+                  Bhagwan Lal Indraji.
+                </p>
+              </div>
+              <div class="main-article1-banner2">
+                <img
+                  class="-article1-banner2-cover"
+                  src="images/banner2.jpg"
+                  alt="article1-banner2img"
+                  draggable="false"
+                />
+                <h1 class="-article1-banner-title">Qualidade</h1>
+                <p class="-article1-banner-subtitle">
+                  O resultado são aromas que acolhem, despertam, que trazem
+                  ternura e que revigoram.
+                </p>
+              </div>
+              <div class="main-article1-banner3">
+                <img
+                  class="-article1-banner3-cover"
+                  src="images/banner3.jpg"
+                  alt="article1-banner3img"
+                  draggable="false"
+                />
+                <h1 class="-article1-banner-title">Inovação</h1>
+                <p class="-article1-banner-subtitle">
+                  Além dos cheirinhos tradicionais, estamos sempre trazendo
+                  novos produtos com a qualidade que você já conhece.
+                </p>
+              </div>
+            </aside>
+          </article>
+          <article class="main-article2">
+            <section class="main-article2-section-left">
+              <img
+                class="article2-img"
+                src="images/article2img.jpg"
+                alt="main-article2img"
+                draggable="false"
+              />
+              <div class="cta-wrapper">
+                <h4 class="cta-surtitle">PRODUTOS</h4>
+                <h2 class="cta-title">Shoo Next</h2>
+                <p class="cta-p">
+                  As velas decorativas Shoo são veganas feitas com cera vegetal
+                  de soja, sem parafina, que possibilita uma queima mais limpa e
+                  melhor dispersão do aroma.
+                </p>
+                <a class="cta-button" href="#">Comprar</a>
+              </div>
+            </section>
+            <!-- SWIPER PRODUTOS COMEÇA AQUI -->
+            <aside class="main-article2-aside-right">
+              <aside class="swiper-produtos-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide main-product-slide1"></div>
+                  <div class="swiper-slide main-product-slide2"></div>
+                  <div class="swiper-slide main-product-slide3"></div>
+                  <div class="swiper-slide main-product-slide4"></div>
+                  <div class="swiper-slide main-product-slide5"></div>
+                  <div class="swiper-slide main-product-slide6"></div>
+                </div>
+              </aside>
+              <div class="swiper-button-prev -button-swiper-produto"></div>
+              <div class="swiper-button-next -button-swiper-produto"></div>
+            </aside>
+            <!-- SWIPER PRODUTOS TERMINA AQUI -->
+          </article>
+          <article class="main-article3">
+            <!-- SWIPER INSTAGRAM COMEÇA AQUI -->
+            <h1 class="main-article3-title">@shoovelas</h1>
+            <section class="swiper-insta-container">
+              <section class="swiper-wrapper">
+                <article class="swiper-slide -slide1">
+                  <h2 class="slidetext">Todos os dias trazem uma oportunidade para mimar os nossos clientes, afinal são eles que nos motivam a continuar o nosso trabalho diariamente.</h2>
+                </article>
+                <article class="swiper-slide -slide2">
+                  <h2 class="slidetext">Querido cliente, nossa dedicação e empenho para fazer um trabalho cada vez melhor tem um motivo, fazer você feliz.</h2>
+                </article>
+                <article class="swiper-slide -slide3">
+                  <h2 class="slidetext">Confeccionamos nossos produtos pensando em você, querido cliente. Desde a qualidade da matéria-prima até as embalagens do produto final, tudo é pensado para seu melhor aproveitamento.
+                </article>
+                <article class="swiper-slide -slide4">
+                  <h2 class="slidetext">Por isso, queremos agradecer a você por fazer esse sonho acontecer.</h2>
+                </article>
+                <article class="swiper-slide -slide5">
+                  <h2 class="slidetext">Um brinde a você, que nos inspira todos os dias. A sua preferência é nossa maior satisfação. Feliz dia do cliente!</h2>
+                </article>
+                <article class="swiper-slide -slide6">
+                    <h2 class="slidetext">Nossos serviços foram desenvolvidos para facilitar a sua vida. Pensamos em um jeito de estar presente no dia a dia das pessoas e você nos ajudou a concretizar esse sonho. Obrigado por fazer parte da nossa história e por ser a inspiração para o nosso trabalho.</h2>
+                  </article>
+                  <article class="swiper-slide -slide7">
+                    <h2 class="slidetext">A nossa missão é prestar um serviço de qualidade e que promova a satisfação dos nossos clientes. Por isso, prezamos pelo cuidado desde o atendimento até o fim do nosso serviço, com muito atenção para que ao fim de cada parceira, todas as partes tenham a sensação de dever cumprido.</h2>
+                  </article>
+                  <article class="swiper-slide -slide8">
+                    <h2 class="slidetext">Não há palavras para agradecer o seu reconhecimento pelo nosso trabalho. Por você, queremos dar sempre o melhor para retribuir a confiança que deposita em nós todos os dias. Obrigado e volte sempre!</h2>
+                  </article>
+                  <article class="swiper-slide -slide9">
+                    <h2 class="slidetext">Querido cliente, com muito orgulho celebramos o seu dia. Sem você, nosso sonho de transformar a vida das pessoas através do nosso trabalho não seria possível.
+                  </article>
+                  <article class="swiper-slide -slide10">
+                    <h2 class="slidetext">Agradecemos a sua preferência e confiança. Atender às suas expectativas é o que nos motiva a sermos ainda melhores.</h2>
+                  </article>
+                  <article class="swiper-slide -slide11">
+                  <h2 class="slidetext">Se trabalhamos bem é porque os nossos clientes nos ensinam a melhorar todos os dias. A cada dia que te recebemos de braços abertos, começa uma incrível jornada de esforço e aprendizado.</h2>
+                </article>
+              </section>
+              <!-- SWIPER INSTAGRAM TERMINA AQUI -->
+            </section>
+            <aside class="swiper-button-prev -button-swiper-insta"></aside>
+            <aside class="swiper-button-next -button-swiper-insta"></aside>
+          </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <section class="footer-container-left">
+          <ul class="footer-menu-title -footer-title">
+            <a class="footer-logo" href="#">
+              <img
+                class="footer-logo-svg"
+                src="./images/logo.png"
+                alt="Logo SVG"
+                draggable="false"
+              />
+            </a>
+          </ul>
+          <ul class="footer-menu">
+            <li class="footer-menu-submenu"><a href="#">Novidades</a></li>
+            <li class="footer-menu-submenu"><a href="#">Produtos</a></li>
+            <li class="footer-menu-submenu"><a href="#">Blog</a></li>
+            <li class="footer-menu-submenu"><a href="#">Portal</a></li>
+          </ul>
+        </section>
+        <section class="footer-container-middle">
+          <ul class="footer-contato-title -footer-title">
+            fale conosco
+          </ul>
+          <ul class="footer-contato">
+            <form class="footer-contato-submenu">
+              <input
+                class="-inputbar -input-footer"
+                type="email"
+                name="email"
+                onfocus="this.placeholder"
+                placeholder="E-mail"
+                maxlength="40"
+              />
+              <input class="button-enviar-footer" type="submit" value="Enviar" />
+            </form>
+          </ul>
+        </section>
+        <section class="footer-container-right">
+          <ul class="footer-socials-title -footer-title">
+            socials
+          </ul>
+          <ul class="footer-socials">
+            <li class="footer-socials-submenu">
+              <a href="#" class="-insta-text-footer">instagram</a
+              ><a href="#"><i class="fab fa-instagram -icon-darkmode"></i></a>
+            </li>
+            <li class="footer-socials-submenu">
+              <a href="#" class="-face-text-footer">facebook</a
+              ><a href="#"> <i class="fab fa-facebook -icon-darkmode"></i></a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-wrapper-company">
+        <li class="-company-container">
+          <p class="-company-footer">
+            @Vnda - Tecnologia para ecommerce – CNPJ 12.3456.789/1011-12
+          </p>
+        </li>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/all.js"></script>
-</body>
+  </body>
 </html>
